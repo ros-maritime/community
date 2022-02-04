@@ -1,19 +1,10 @@
-# {{NAME}} Working Group
-
-{{
-TEMPLATE: This repository acts as a template for individual Working Groups to start from.
-All information in double curly-braces must be replaced with details for the specific Working Group.
-NOTE: check the issue and pull request templates as well, under `.github` directory.
-
-This is a template repository.
-When starting a new working group, [use this template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) to create a new repository in the WG organization.
-}}
+# ROS 2 Maritime Robotics Working Group
 
 This document defines the scope and governance of the Working Group (WG).
 
-{{Mission: The {{NAME}} Working Group's mission is to...}}
+Mission: To unite, create and upgrade generic maritime robotics solutions that can be easily deployed in maritime robots. 
 
-{{Scope: the types of topics, tools, libraries, applications, documents, etc, that this working group focuses on. }}
+Scope: ROS 2 packages related to maritime robotics specificities of any robotics field: control, simulation, drivers... 
 
 ## Subprojects
 
@@ -24,14 +15,129 @@ Its meetings and membership are largely focused on the direction, design, and wo
 
 The following subprojects are owned by the Working Group:
 
-{{
-
-* template-project
-  * Description: Brief description of project. Remove this item and add new projects using this format.
+* Communication
+  * Description: Packages for underwater network wireless communication.
+  * Motive: Since underwater communications relies on acoustic waves, there are some specificities regarding these types of waves that should be taken into account during data transmission.
   * Repositories
-    * link-to-repository
+    * Suggestions...
+  * References: 
+    *  [ns uan](https://www.nsnam.org/docs/models/html/uan.html)
 
-}}
+* Common Messages
+  * Description: Specifics ROS messages for maritime robotics.
+  * Motive: There are maritime robotics sensors that gives specific type of messages.
+  * Unique Repo
+    * **[Proposal]** ROS Maritime Robotics Messages
+  * References: 
+    *  [UW APL Hydrographic Messages](https://github.com/apl-ocean-engineering/hydrographic_msgs)
+
+### Should we get together Communication and Common Messages?
+
+* Drivers
+  * Description: Documentation and index for underwater sensors and actuators drivers.
+  * Motive: There are specifics components used only for maritime robotics, which requires drivers to interact with them. Although, there already is an ROS organization to develop ROS drivers, so instead of developing inside this organization, we would use it just to have an index describing maritimate focused ROS drivers.
+  * Unique Repo
+    * **[Proposal]** ROS Maritime Robotics Drivers Index
+    * **[Proposal]** Sonar and radar drivers
+  * References: 
+    *  [ROS Drivers](https://github.com/ros-drivers)
+
+* Documentation
+  * Description: Documentation and index for maritime robotics packages and organizations.
+  * Motive: There are already many organizations and repos for maritime robotics. It is important to map what it is already developed in the area as well as make tutorials for newcomers or people that want to contribute with maritime robotics development.
+  * Repositories
+    * **[Proposal]** ROS Maritime Robotics Documentation Index
+    * **[Proposal]** ROS Maritime Robotics Tutorials
+  * References: 
+    * [COLA2](https://iquarobotics.com/cola2): ROS and Gazebo
+    * [VRX](https://github.com/osrf/vrx): ROS and Gazebo
+    * [UUV Simulator](https://uuvsimulator.github.io/): ROS and Gazebo
+    * [Plankton](https://github.com/Liquid-ai/Plankton): ROS2 and Gazebo
+    * [Ignition native underwater vehicles](https://ignitionrobotics.org/api/gazebo/5.0/underwater_vehicles.html): Ignition 
+    * [MBARI Vehicle Simulated in Ignition](https://github.com/osrf/lrauv/): Ignition 
+    * [Project Dave](https://github.com/Field-Robotics-Lab/dave/wiki): ROS and Gazebo
+    * [DS SIM](https://bitbucket.org/whoidsl/ds_sim/src/master/): ROS and Gazebo
+    * [UW APL Hydrographic Messages](https://github.com/apl-ocean-engineering/hydrographic_msgs): ROS
+  
+* Dynamic Model
+  * Description: Packages related to estimation and iteration of maritime robots models.
+  * Motive: Maritime robots dynamical models have to take into account buoayancy, hydrodynamics... Therefore some packages regarding math models are needed. 
+  * Repositories
+    * **[Proposal]** Maritime vehicle model estimation based on URDF
+      * Use vehicle mesh and parameters to estimate the Fossen equation of motion parameters
+    * **[Proposal]** Maritime vehicle estimation based experiments
+      * Use control, pose and velocity bags and URDF to estimate the Fossen equation of motion parameters
+    * **[Proposal]** Maritime vehicle model
+      * Use vehicle equations of motion to predict robot next position and velocity. This can be used with localization and control algorithms.
+  * References: 
+    *  Python lib that estimates added mass: [Capytaine](https://github.com/mancellin/capytaine)
+    *  [OpenFoam](https://www.openfoam.com/)
+
+* Guidance, Navigation and Control (GNC)  
+  * Description: Packages for gnc of maritime robots.
+  * Motive: There are some control and tasks specifics to maritime robots, such as thruster control allocation, surveilance, vessels handling of tides...
+  * Repositories
+    * **[Proposal]** Thruster manager
+  * References: 
+    *  [Plankton thruster manager](https://github.com/Liquid-ai/Plankton/blob/master/uuv_control/uuv_thruster_manager/src/uuv_thrusters/thruster_manager.py)
+ 
+* Localization
+  * Description: Packages to localize maritime vehicles.
+  * Motive: Underwater vehicles have a lot of differences regarding the sensors they can use for localizing theirselves. GPS does not works underwater, as well as lidars or electromagnetic waves for long distances... But acoustic waves work pretty well, so underwater localization rely more on sensors like DVL and Sonar, that uses acoustic waves to measure distance and velocity.  
+  * Repositories:
+    * **[Proposal]**: Multilateration of acoustic beacons
+  * References: 
+    *  [Mesh Navigation](https://github.com/uos/mesh_navigation)
+    *  [Fuse Localization](https://github.com/uos/mesh_navigation)
+    *  [MagNav](https://www.gpsworld.com/us-air-force-to-explore-navigating-with-magnetism/)
+
+* Perception
+  * Description: Packages for perception algorithms for maritime robotics.
+  * Motive: Since there are different sensors such as sonars, there is a need to process this data to obtain information. Moreover, it can be created some common structures detection.
+  * Repositories:
+    * **[Proposal]**: Common Maritime Environments Detections (buoys, valves, pipes...)
+    * **[Proposal]**: Fusion of sonar and camera data
+  * References: 
+    * Suggestions...
+   
+* Robots
+  * Description: Packages with maritime robots and structures.
+  * Motive: All the software being develop shall have not only unit tests but integration tests, so robots and structures shall be developed for this purporse. These shall include vcstool for specifying packages to be used with the robot as well as ros_ign_bridge to test it on simulation.
+  * Repositories
+    * **[Proposal]** Hover type UW vehicle
+    * **[Proposal]** Torpedo shaped UW vehicle
+    * **[Proposal]** USV
+    * **[Proposal]** Intervention UW vehicle 
+  * References: 
+    *  Intervention UW sample [RexROV2](https://uuvsimulator.github.io/packages/rexrov2/intro/)
+    *  Torpedo Shaped UW vehicle [lrauv](https://github.com/osrf/lrauv/)
+   
+* Simulation
+  * Description: Documentation and index for maritime robotics Ignition plugins.
+  * Motive: There is no need to mix ros code with simulation, also there is already some maritime robotics development in Ignition, so is a good thing to contribute to ign-plugin repo instead of creating other in this organization.
+  * Repositories
+    * **[Proposal]** Maritime Robotics Ignition Plugins Index
+    * **[Proposal]** Wave Simulation (repo shall be in ign-plugins)
+    * **[Proposal]** Acoustics Simulation (repo shall be in ign-plugins) (Include salinity and temperature effects)
+    * **[Proposal]** Radar Simulation (repo shall be in ign-plugins)
+    * **[Proposal]** Sonar Simulation (repo shall be in ign-plugins)
+  * References: 
+    *  [ASV Wave Simulator](https://github.com/srmainwaring/asv_wave_sim/tree/feature/fft_waves)
+
+* Tools
+  * Description: Extra category for packages that do something specific that don't fit in any other category
+  * Motive: There might be some tools that can be developed for maritime robotics that doesn't fit another category, such as geographic information convertion. 
+  * Repositories
+    * **[Proposal]** Geographic convertions
+  * References: 
+    *  Suggestions...
+
+#### Form_1: Navigation and control stack? How to use Nav2 alongside control, perception...
+#### Form_2: SWARM of UW vehicles 
+#### Form_3: I think that any scaffolding that helps build common sets of behaviors (like what is available when you use IvP-Helm) would be very useful
+#### Form_4: How does one re-set the map frame if the distance traveled causes errors to grow (>~15 km)? What conventions should be used for sonar system reference frames? How should the metadata that must be captured with sonar data be packaged (we propose a model similar to the out-of-band camera_info topic for cameras). How should/can electronic nautical charts be used safely? 
+#### Form_5: Buoyancy tuner and inspector for simulation
+#### Discussion_1: Cpp for every node that can go inside the robot
 
 ### Standards for subprojects
 
@@ -74,17 +180,20 @@ If the repositories of the subproject are under the WG's GitHub organization, th
 
 ### Meetings
 
-* Regular WG Meeting: {{time schedule for meetings}}
-  * {{when and where will meetings be announced}}
-  * {{what artifacts will be posted after the meetings, e.g. Minutes, Recordings}}
+* Regular WG Meeting: First Tuesday of every month at 8AM PST
+  * Meetings Annoucement: One week before the meeting at ROS Discourse
+  * Outputs of the meetings: Recording and minutes of the meeting at ROS Discorse
 
 ### Communication Channels
 
-{{How can members communicate with each other? Discourse, Discord, IRC, email list, etc.}}
+* Instant messaging: [Matrix community](https://matrix.to/#/#ros-maritime:matrix.org) (Matrix is an open network for secure, decentralized communication).
+* Google Group: [Meeting invite group](https://groups.google.com/g/maritime-robotics-working-group-invites)
+* Github organization: [ros-maritime](https://github.com/ros-maritime)
+* Discourse tag: [wg-maritime-robotics](https://discourse.ros.org/tag/wg-maritime-robotics)
 
 ### Backlog Management
 
-{{Is any project management software/site used to track work for this Working Group? How can new members discover the highest impact tasks they could take on? GitHub Projects, ZenHub, etc.}}
+Each project shall discuss and define its goals in element.
 
 ### Membership, Roles and Organization Management
 
@@ -103,7 +212,6 @@ Working Group members may act in one or more of the following roles:
   * Responsible for approving and merging pull requests
   * Responsible for vetting and accepting new projects into the Working Group
 * **Lead**
-  * TSC member or their delegate
   * Responsible for organizing and moderating working group meetings
   * Responsible for posting meeting materials (minutes, recordings, etc.)
   * Responsible for breaking ties
