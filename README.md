@@ -27,11 +27,7 @@ The following subprojects are owned by the Working Group:
   * Description: Specifics ROS messages for maritime robotics.
   * Motive: There are maritime robotics sensors that gives specific type of messages.
   * Unique Repo
-    * **[Proposal]** ROS Maritime Robotics Messages
-  * References: 
-    *  [UW APL Hydrographic Messages](https://github.com/apl-ocean-engineering/hydrographic_msgs)
-
-### Should we get together Communication and Common Messages?
+    *  Assist the development of [UW APL Hydrographic Messages](https://github.com/apl-ocean-engineering/hydrographic_msgs)
 
 * Drivers
   * Description: Documentation and index for underwater sensors and actuators drivers.
@@ -132,13 +128,6 @@ The following subprojects are owned by the Working Group:
   * References: 
     *  Suggestions...
 
-#### Form_1: Navigation and control stack? How to use Nav2 alongside control, perception...
-#### Form_2: SWARM of UW vehicles 
-#### Form_3: I think that any scaffolding that helps build common sets of behaviors (like what is available when you use IvP-Helm) would be very useful
-#### Form_4: How does one re-set the map frame if the distance traveled causes errors to grow (>~15 km)? What conventions should be used for sonar system reference frames? How should the metadata that must be captured with sonar data be packaged (we propose a model similar to the out-of-band camera_info topic for cameras). How should/can electronic nautical charts be used safely? 
-#### Form_5: Buoyancy tuner and inspector for simulation
-#### Discussion_1: Cpp for every node that can go inside the robot
-
 ### Standards for subprojects
 
 Subprojects must meet the following criteria (and the WG agrees to maintain them upon adoption).
@@ -188,7 +177,17 @@ If the repositories of the subproject are under the WG's GitHub organization, th
 
 * Instant messaging: [Matrix community](https://matrix.to/#/#ros-maritime:matrix.org) (Matrix is an open network for secure, decentralized communication).
 * Google Group: [Meeting invite group](https://groups.google.com/g/maritime-robotics-working-group-invites)
-* Github organization: [ros-maritime](https://github.com/ros-maritime)
+* Github organization: [ros-#### Form_1: Navigation and control stack? How to use Nav2 alongside control, perception...
+134
+#### Form_2: SWARM of UW vehicles 
+135
+#### Form_3: I think that any scaffolding that helps build common sets of behaviors (like what is available when you use IvP-Helm) would be very useful
+136
+#### Form_4: How does one re-set the map frame if the distance traveled causes errors to grow (>~15 km)? What conventions should be used for sonar system reference frames? How should the metadata that must be captured with sonar data be packaged (we propose a model similar to the out-of-band camera_info topic for cameras). How should/can electronic nautical charts be used safely? 
+137
+#### Form_5: Buoyancy tuner and inspector for simulation
+138
+#### Discussion_1: Cpp for every node that can go inside the robotmaritime](https://github.com/ros-maritime)
 * Discourse tag: [wg-maritime-robotics](https://discourse.ros.org/tag/wg-maritime-robotics)
 
 ### Backlog Management
@@ -217,8 +216,7 @@ Working Group members may act in one or more of the following roles:
   * Responsible for breaking ties
 
 To become a member or change role, create an issue in this repository using the appropriate issue template.
-Such applications are accepted upon unanimous agreement from Approvers, and are typically based on the applicant's history with the subprojects of the Working Group.
-The Lead role cannot be applied for, as it is an appointee of the ROS 2 TSC.
+Such applications are accepted upon unanimous agreement from Approvers, and are typically based on the applicant's history with the subprojects of the Working Group. The Lead role cannot be applied for.
 
 ### Modifying this governance document
 
