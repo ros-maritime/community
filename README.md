@@ -21,17 +21,17 @@ The following subprojects are owned by the Working Group:
   * Repositories
     * Suggestions...
   * References: 
-    *  [ns uan](https://www.nsnam.org/docs/models/html/uan.html)
+    *  [ns UAN](https://www.nsnam.org/docs/models/html/uan.html)
 
 * Common Messages
-  * Description: Specifics ROS messages for maritime robotics.
-  * Motive: There are maritime robotics sensors that gives specific type of messages.
+  * Description: Specific ROS messages for maritime robotics.
+  * Motive: There are maritime robotics sensors that give specific types of messages.
   * Unique Repo
     *  Assist the development of [UW APL Hydrographic Messages](https://github.com/apl-ocean-engineering/hydrographic_msgs)
 
 * Drivers
   * Description: Documentation and index for underwater sensors and actuators drivers.
-  * Motive: There are specifics components used only for maritime robotics, which requires drivers to interact with them. Although, there already is an ROS organization to develop ROS drivers, so instead of developing inside this organization, we would use it just to have an index describing maritimate focused ROS drivers.
+  * Motive: There are specific components used only for maritime robotics, which requires drivers to interact with them. Although, there already is an ROS organization to develop ROS drivers, so instead of developing inside this organization, we would use it just to have an index describing maritimate focused ROS drivers.
   * Unique Repo
     * **[Proposal]** ROS Maritime Robotics Drivers Index
     * **[Proposal]** Sonar and radar drivers
@@ -46,32 +46,32 @@ The following subprojects are owned by the Working Group:
     * **[Proposal]** ROS Maritime Robotics Tutorials
   * References: 
     * [COLA2](https://iquarobotics.com/cola2): ROS and Gazebo
-    * [VRX](https://github.com/osrf/vrx): ROS and Gazebo
+    * [Virtual RobotX (VRX)](https://github.com/osrf/vrx): ROS and Gazebo
     * [UUV Simulator](https://uuvsimulator.github.io/): ROS and Gazebo
     * [Plankton](https://github.com/Liquid-ai/Plankton): ROS2 and Gazebo
-    * [Ignition native underwater vehicles](https://ignitionrobotics.org/api/gazebo/5.0/underwater_vehicles.html): Ignition 
-    * [MBARI Vehicle Simulated in Ignition](https://github.com/osrf/lrauv/): Ignition 
-    * [Project Dave](https://github.com/Field-Robotics-Lab/dave/wiki): ROS and Gazebo
-    * [DS SIM](https://bitbucket.org/whoidsl/ds_sim/src/master/): ROS and Gazebo
+    * [Ignition native underwater vehicles](https://ignitionrobotics.org/api/gazebo/6.4/underwater_vehicles.html): Ignition 
+    * [MBARI LRAUV simulated in Ignition](https://github.com/osrf/lrauv/): Ignition 
+    * [NPS Project DAVE](https://github.com/Field-Robotics-Lab/dave/wiki): ROS and Gazebo
+    * [WHOI Deep Submergence Lab ds_sim](https://bitbucket.org/whoidsl/ds_sim/src/master/): ROS and Gazebo
     * [UW APL Hydrographic Messages](https://github.com/apl-ocean-engineering/hydrographic_msgs): ROS
   
 * Dynamic Model
   * Description: Packages related to estimation and iteration of maritime robots models.
-  * Motive: Maritime robots dynamical models have to take into account buoayancy, hydrodynamics... Therefore some packages regarding math models are needed. 
+  * Motive: Maritime robots dynamical models have to take into account buoyancy, hydrodynamics... Therefore some packages regarding math models are needed. 
   * Repositories
     * **[Proposal]** Maritime vehicle model estimation based on URDF
       * Use vehicle mesh and parameters to estimate the Fossen equation of motion parameters
     * **[Proposal]** Maritime vehicle estimation based experiments
       * Use control, pose and velocity bags and URDF to estimate the Fossen equation of motion parameters
     * **[Proposal]** Maritime vehicle model
-      * Use vehicle equations of motion to predict robot next position and velocity. This can be used with localization and control algorithms.
+      * Use vehicle equations of motion to predict the robot's next position and velocity. This can be used with localization and control algorithms.
   * References: 
     *  Python lib that estimates added mass: [Capytaine](https://github.com/mancellin/capytaine)
     *  [OpenFoam](https://www.openfoam.com/)
 
 * Guidance, Navigation and Control (GNC)  
-  * Description: Packages for gnc of maritime robots.
-  * Motive: There are some control and tasks specifics to maritime robots, such as thruster control allocation, surveilance, vessels handling of tides...
+  * Description: Packages for GNC of maritime robots.
+  * Motive: There are some controls and tasks specifics to maritime robots, such as thruster control allocation, surveillance, vessels' handling of tides...
   * Repositories
     * **[Proposal]** Thruster manager
   * References: 
@@ -79,7 +79,7 @@ The following subprojects are owned by the Working Group:
  
 * Localization
   * Description: Packages to localize maritime vehicles.
-  * Motive: Underwater vehicles have a lot of differences regarding the sensors they can use for localizing theirselves. GPS does not works underwater, as well as lidars or electromagnetic waves for long distances... But acoustic waves work pretty well, so underwater localization rely more on sensors like DVL and Sonar, that uses acoustic waves to measure distance and velocity.  
+  * Motive: Underwater vehicles have a lot of differences regarding the sensors they can use for localizing themselves. GPS does not work underwater, as well as lidars or electromagnetic waves for long distances... But acoustic waves work pretty well, so underwater localization rely more on sensors like DVL and Sonar, that uses acoustic waves to measure distance and velocity.  
   * Repositories:
     * **[Proposal]**: Multilateration of acoustic beacons
   * References: 
@@ -98,7 +98,7 @@ The following subprojects are owned by the Working Group:
    
 * Robots
   * Description: Packages with maritime robots and structures.
-  * Motive: All the software being develop shall have not only unit tests but integration tests, so robots and structures shall be developed for this purporse. These shall include vcstool for specifying packages to be used with the robot as well as ros_ign_bridge to test it on simulation.
+  * Motive: All the software being developed shall have not only unit tests but integration tests, so robots and structures shall be developed for this purpose. These shall include vcstool for specifying packages to be used with the robot as well as ros_ign_bridge to test it in simulation.
   * Repositories
     * **[Proposal]** Hover type UW vehicle
     * **[Proposal]** Torpedo shaped UW vehicle
@@ -106,11 +106,11 @@ The following subprojects are owned by the Working Group:
     * **[Proposal]** Intervention UW vehicle 
   * References: 
     *  Intervention UW sample [RexROV2](https://uuvsimulator.github.io/packages/rexrov2/intro/)
-    *  Torpedo Shaped UW vehicle [lrauv](https://github.com/osrf/lrauv/)
+    *  Torpedo Shaped UW vehicle [LRAUV](https://github.com/osrf/lrauv/)
    
 * Simulation
   * Description: Documentation and index for maritime robotics Ignition plugins.
-  * Motive: There is no need to mix ros code with simulation, also there is already some maritime robotics development in Ignition, so is a good thing to contribute to ign-plugin repo instead of creating other in this organization.
+  * Motive: There is no need to mix ROS code with simulation, also there is already some maritime robotics development in Ignition, so it is a good thing to contribute to ign-gazebo repo instead of creating other in this organization.
   * Repositories
     * **[Proposal]** Maritime Robotics Ignition Plugins Index
     * **[Proposal]** Wave Simulation (repo shall be in ign-plugins)
@@ -119,6 +119,7 @@ The following subprojects are owned by the Working Group:
     * **[Proposal]** Sonar Simulation (repo shall be in ign-plugins)
   * References: 
     *  [ASV Wave Simulator](https://github.com/srmainwaring/asv_wave_sim/tree/feature/fft_waves)
+    *  [ign-gazebo](https://github.com/ignitionrobotics/ign-gazebo)
 
 * Tools
   * Description: Extra category for packages that do something specific that don't fit in any other category
@@ -170,8 +171,8 @@ If the repositories of the subproject are under the WG's GitHub organization, th
 ### Meetings
 
 * Regular WG Meeting: First Tuesday of every month at 8AM PST
-  * Meetings Annoucement: One week before the meeting at ROS Discourse
-  * Outputs of the meetings: Recording and minutes of the meeting at ROS Discorse
+  * Meetings Announcement: One week before the meeting at ROS Discourse
+  * Outputs of the meetings: Recording and minutes of the meeting at ROS Discourse
 
 ### Communication Channels
 
