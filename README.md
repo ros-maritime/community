@@ -1,10 +1,10 @@
-# ROS 2 Maritime Robotics Working Group
+# ROS Maritime Robotics Working Group
 
 This document defines the scope and governance of the Working Group (WG).
 
 Mission: To unite, create and upgrade generic maritime robotics solutions that can be easily deployed in maritime robots. 
 
-Scope: ROS 2 packages related to maritime robotics specificities of any robotics field: control, simulation, drivers... 
+Scope: ROS packages related to maritime robotics specificities of any robotics field: control, simulation, drivers... 
 
 ## Subprojects
 
@@ -61,9 +61,9 @@ The following subprojects are owned by the Working Group:
   * Repositories
     * **[Proposal]** Maritime vehicle model estimation based on URDF
       * Use vehicle mesh and parameters to estimate the Fossen equation of motion parameters
-    * **[Proposal]** Maritime vehicle estimation based experiments
+    * **[Proposal]** Maritime vehicle model estimation based experiments
       * Use control, pose and velocity bags and URDF to estimate the Fossen equation of motion parameters
-    * **[Proposal]** Maritime vehicle model
+    * **[Proposal]** Maritime vehicle model iterator
       * Use vehicle equations of motion to predict the robot's next position and velocity. This can be used with localization and control algorithms.
   * References: 
     *  Python lib that estimates added mass: [Capytaine](https://github.com/mancellin/capytaine)
@@ -133,8 +133,8 @@ The following subprojects are owned by the Working Group:
 
 Subprojects must meet the following criteria (and the WG agrees to maintain them upon adoption).
 
-* Build passes against ROS 2 master
-* The ROS 2 standard linter set is enabled and adhered to
+* Build passes against ROS master
+* The ROS standard linter set is enabled and adhered to
 * If packages are part of nightly builds on the ROS build farm, there are no reported warnings or test failures
 * Quality builds are green (address sanitizer, thread sanitizer, clang thread safety analysis)
 * Test suite passes
@@ -178,18 +178,21 @@ If the repositories of the subproject are under the WG's GitHub organization, th
 
 * Instant messaging: [Matrix community](https://matrix.to/#/#ros-maritime:matrix.org) (Matrix is an open network for secure, decentralized communication).
 * Google Group: [Meeting invite group](https://groups.google.com/g/maritime-robotics-working-group-invites)
-* Github organization: [ros-#### Form_1: Navigation and control stack? How to use Nav2 alongside control, perception...
-134
-#### Form_2: SWARM of UW vehicles 
-135
-#### Form_3: I think that any scaffolding that helps build common sets of behaviors (like what is available when you use IvP-Helm) would be very useful
-136
-#### Form_4: How does one re-set the map frame if the distance traveled causes errors to grow (>~15 km)? What conventions should be used for sonar system reference frames? How should the metadata that must be captured with sonar data be packaged (we propose a model similar to the out-of-band camera_info topic for cameras). How should/can electronic nautical charts be used safely? 
-137
-#### Form_5: Buoyancy tuner and inspector for simulation
-138
-#### Discussion_1: Cpp for every node that can go inside the robotmaritime](https://github.com/ros-maritime)
+* Github organization: [ros-maritime](https://github.com/ros-maritime)
 * Discourse tag: [wg-maritime-robotics](https://discourse.ros.org/tag/wg-maritime-robotics)
+
+#### Form_1: Navigation and control stack? How to use Nav2 alongside control, perception...
+
+#### Form_2: SWARM of UW vehicles 
+
+#### Form_3: I think that any scaffolding that helps build common sets of behaviors (like what is available when you use IvP-Helm) would be very useful
+
+#### Form_4: How does one re-set the map frame if the distance traveled causes errors to grow (>~15 km)? What conventions should be used for sonar system reference frames? How should the metadata that must be captured with sonar data be packaged (we propose a model similar to the out-of-band camera_info topic for cameras). How should/can electronic nautical charts be used safely? 
+
+#### Form_5: Buoyancy tuner and inspector for simulation
+
+#### Discussion_1: Cpp for every node that can go inside the robotmaritime](https://github.com/ros-maritime)
+
 
 ### Backlog Management
 
@@ -222,4 +225,4 @@ Such applications are accepted upon unanimous agreement from Approvers, and are 
 ### Modifying this governance document
 
 Changes to this document will be made via Pull Request.
-The PR will be merged on unanimous agreement from Approvers.
+The PR will be merged on 2 agreement from Approvers.
