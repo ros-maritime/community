@@ -4,7 +4,7 @@ This document defines the scope and governance of the Working Group (WG).
 
 Mission: To unite, create and upgrade generic maritime robotics solutions that can be easily deployed in maritime robots. 
 
-Scope: ROS packages related to maritime robotics specificities of any robotics field: control, simulation, drivers... 
+Scope: ROS packages related to maritime robotics specificities of any robotics field: control, simulation, drivers... All maritime robots types are included, whether they are USV (Ummaned Surface Vehicle), AUV (Autonomous Underwater Vehicles), underwater manipulators...
 
 ## Subprojects
 
@@ -30,7 +30,7 @@ The following subprojects are owned by the Working Group:
     *  Assist the development of [UW APL Hydrographic Messages](https://github.com/apl-ocean-engineering/hydrographic_msgs)
 
 * Drivers
-  * Description: Documentation and index for underwater sensors and actuators drivers.
+  * Description: Documentation and index for underwater and surface vehicles sensors and actuators drivers.
   * Motive: There are specific components used only for maritime robotics, which requires drivers to interact with them. Although, there already is an ROS organization to develop ROS drivers, so instead of developing inside this organization, we would use it just to have an index describing maritimate focused ROS drivers.
   * Unique Repo
     * **[Proposal]** ROS Maritime Robotics Drivers Index
@@ -79,7 +79,7 @@ The following subprojects are owned by the Working Group:
  
 * Localization
   * Description: Packages to localize maritime vehicles.
-  * Motive: Underwater vehicles have a lot of differences regarding the sensors they can use for localizing themselves. GPS does not work underwater, as well as lidars or electromagnetic waves for long distances... But acoustic waves work pretty well, so underwater localization rely more on sensors like DVL and Sonar, that uses acoustic waves to measure distance and velocity.  
+  * Motive: Underwater and surface vehicles have a lot of differences regarding the sensors they can use for localizing themselves. GPS does not work underwater, as well as lidars or electromagnetic waves for long distances... But acoustic waves work pretty well, so underwater localization rely more on sensors like DVL and Sonar, that uses acoustic waves to measure distance and velocity.  
   * Repositories:
     * **[Proposal]**: Multilateration of acoustic beacons
   * References: 
