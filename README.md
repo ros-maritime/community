@@ -59,15 +59,10 @@ The following subprojects are owned by the Working Group:
   * Description: Packages related to estimation and iteration of maritime robots models.
   * Motive: Maritime robots dynamical models have to take into account buoyancy, hydrodynamics... Therefore some packages regarding math models are needed. 
   * Repositories
-    * **[Proposal]** Maritime vehicle model estimation based on URDF
-      * Use vehicle mesh and parameters to estimate the Fossen equation of motion parameters
     * **[Proposal]** Maritime vehicle model estimation based experiments
       * Use control, pose and velocity bags and URDF to estimate the Fossen equation of motion parameters
     * **[Proposal]** Maritime vehicle model iterator
       * Use vehicle equations of motion to predict the robot's next position and velocity. This can be used with localization and control algorithms.
-  * References: 
-    *  Python lib that estimates added mass: [Capytaine](https://github.com/mancellin/capytaine)
-    *  [OpenFoam](https://www.openfoam.com/)
 
 * Guidance, Navigation and Control (GNC)  
   * Description: Packages for GNC of maritime robots.
