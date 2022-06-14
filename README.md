@@ -104,17 +104,17 @@ The following subprojects are owned by the Working Group:
     *  Torpedo Shaped UW vehicle [LRAUV](https://github.com/osrf/lrauv/)
    
 * Simulation
-  * Description: Documentation and index for maritime robotics Ignition plugins.
+  * Description: Documentation and index for maritime robotics Gazebo plugins.
   * Motive: There is no need to mix ROS code with simulation, also there is already some maritime robotics development in Ignition, so it is a good thing to contribute to ign-gazebo repo instead of creating other in this organization.
   * Repositories
-    * **[Proposal]** Maritime Robotics Ignition Plugins Index
+    * **[Proposal]** Maritime Robotics Gazebo Plugins Index
     * **[Proposal]** Wave Simulation (repo shall be in ign-plugins)
     * **[Proposal]** Acoustics Simulation (repo shall be in ign-plugins) (Include salinity and temperature effects)
     * **[Proposal]** Radar Simulation (repo shall be in ign-plugins)
     * **[Proposal]** Sonar Simulation (repo shall be in ign-plugins)
   * References: 
     *  [ASV Wave Simulator](https://github.com/srmainwaring/asv_wave_sim/tree/feature/fft_waves)
-    *  [ign-gazebo](https://github.com/ignitionrobotics/ign-gazebo)
+    *  [Gazebo Sim](https://github.com/gazebosim/gz-sim)
 
 * Tools
   * Description: Extra category for packages that do something specific that don't fit in any other category
