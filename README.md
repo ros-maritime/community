@@ -166,8 +166,8 @@ If the repositories of the subproject are under the WG's GitHub organization, th
 ### Meetings
 
 * Regular WG Meeting: First Tuesday of every month at 8AM PST
-  * Meetings Announcement: One week before the meeting at ROS Discourse
-  * Outputs of the meetings: Recording and minutes of the meeting at ROS Discourse
+  * Meetings Announcement: One week before the meeting in the [Maritime Robotics category](https://discourse.ros.org/c/maritime/36) on [ROS Discourse](https://discourse.ros.org/)
+  * Outputs of the meetings: Recording and minutes of the meeting in the [Maritime Robotics category](https://discourse.ros.org/c/maritime/36) on [ROS Discourse](https://discourse.ros.org/)
 
 ### Communication Channels
 
