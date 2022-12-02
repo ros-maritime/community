@@ -8,12 +8,14 @@ Scope: ROS packages related to maritime robotics specificities of any robotics f
 
 ## Subprojects
 
-This Working Group owns and maintains the following Subprojects.
+This Working Group maintains the following Subprojects.
 Its meetings and membership are largely focused on the direction, design, and work on the projects.
 
 ### Subproject List
 
-The following subprojects, listed under Repositories, are affiliated with the Working Group. Those listed under References are unaffiliated resources for reference.
+The following projects, listed under Repositories, are affiliated with the Working Group.
+
+Those listed under References are unaffiliated resources for reference. The references lists are not meant to be exhaustive.
 
 * Communication
   * Description: Packages for underwater network wireless communication.
@@ -22,7 +24,7 @@ The following subprojects, listed under Repositories, are affiliated with the Wo
     * Suggestions...
   * References: 
     * [ns UAN](https://www.nsnam.org/docs/models/html/uan.html)
-    * WHOI `ros_acomms` https://git.whoi.edu/acomms/ros_acomms/
+    * [WHOI `ros_acomms`](https://git.whoi.edu/acomms/ros_acomms)
 
 * Common Messages
   * Description: Specific ROS messages for maritime robotics.
