@@ -49,7 +49,6 @@ Those listed under References are unaffiliated resources for reference. The refe
     * **[Proposal]** ROS Maritime Robotics Tutorials
   * References: 
     * Marine-specific software architecture
-      * [MOOS-IvP](https://oceanai.mit.edu/moos-ivp/pmwiki/pmwiki.php?n=Main.HomePage)
       * [COLA2](https://iquarobotics.com/cola2): ROS and Gazebo
 
 * Dynamic Model
