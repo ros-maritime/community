@@ -195,7 +195,9 @@ Each project shall discuss and define its goals in element.
 
 ### Membership, Roles and Organization Management
 
-Working Group members may act in one or more of the following roles:
+There are two members categories: Github members and Management Members.
+
+Github members may act in one or more of the following roles:
 
 * **Member**
   * Prerequisite: Attend at least one out of the last three Working Group meetings
@@ -213,6 +215,20 @@ Working Group members may act in one or more of the following roles:
   * Responsible for organizing and moderating working group meetings
   * Responsible for posting meeting materials (minutes, recordings, etc.)
   * Responsible for breaking ties
+ 
+These member can be visualized in the github organization.
+
+Management Members:
+* **Host**
+  * Person who can host the meeting room as well as going through the agenda
+  * Current Members: 
+    - [Matosinho](https://discourse.ros.org/u/matosinho/summary)
+    - [Arjo](https://discourse.ros.org/u/arjo129/summary)
+    - [Laura](https://discourse.ros.org/u/lindzey/summary)
+ * **Minutes**
+  * Person who can write the minutes and follow up action items
+  * Current Members: 
+    - [Bart](https://discourse.ros.org/u/bartb/summaryz)
 
 To become a member or change role, create an issue in this repository using the appropriate issue template.
 Such applications are accepted upon unanimous agreement from Approvers, and are typically based on the applicant's history with the subprojects of the Working Group. The Lead role cannot be applied for.
