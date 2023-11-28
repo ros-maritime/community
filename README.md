@@ -155,7 +155,10 @@ The list is not meant to be exhaustive.
       * [Gazebo (formerly Ignition)](https://github.com/gazebosim/gz-sim)
     * Surface
       * [ASV Wave Simulator](https://github.com/srmainwaring/asv_wave_sim/tree/feature/fft_waves)
-      * [Virtual RobotX (VRX)](https://github.com/osrf/vrx): ROS and Gazebo-classic / new Gazebo
+      * [Virtual RobotX (VRX) competition](https://github.com/osrf/vrx): ROS and Gazebo-classic / new Gazebo
+      * [MBZIRC Maritime Grand Challenge Simulator](https://github.com/osrf/mbzirc): ROS 2 and Gazebo
+      * [MBARI Wave Energy Converter Simulator](https://github.com/osrf/mbari_wec): ROS 2 and Gazebo
+      * Sailboat and wind simulation of [Racing Sparrow 750](https://github.com/srmainwaring/rs750) and [Docker files](https://github.com/srmainwaring/sail_sim_docker)
     * Underwater
       * [UUV Simulator](https://uuvsimulator.github.io/): ROS and Gazebo-classic
       * [NPS Project DAVE](https://github.com/Field-Robotics-Lab/dave/wiki): ROS and Gazebo-classic
