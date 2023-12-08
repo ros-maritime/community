@@ -46,7 +46,7 @@ Working Group participants may act in one or more of the following roles:
 ### Modifying this governance document
 
 Changes to this document will be made via Pull Request.
-The PR will be merged on 2 agreement from Approvers.
+The PR will be merged on 2 agreement from Maintainers.
 
 ## Reference projects
 
